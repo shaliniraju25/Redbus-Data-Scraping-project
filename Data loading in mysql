@@ -1,0 +1,33 @@
+select* from redbusdata12;
+
+SELECT DISTINCT Route_name FROM redbusdata12; 
+
+SELECT DISTINCT state_name FROM redbusdata12;
+
+SELECT DISTINCT bus_name FROM redbusdata12;
+
+SELECT DISTINCT start_time FROM redbusdata12; 
+
+SELECT DISTINCT end_time FROM redbusdata12; 
+
+SELECT DISTINCT total_duration FROM redbusdata12;
+
+SELECT Route_name FROM redbusdata12;
+
+DESCRIBE redbusdata12; 
+
+SELECT Bus_name, Bus_type, Start_time, ratings FROM redbusdata12;
+
+SELECT state_name,route_name, Bus_name, Bus_type, Start_time, End_time, total_duration,ratings FROM redbusdata12;
+
+ALTER TABLE redbusdata12 ADD COLUMN Fare DECIMAL(10, 2);
+
+SELECT state_name,route_name, Bus_name, Bus_type, Start_time, End_time, total_duration,ratings,price FROM redbusdata12;
+
+SELECT MIN(Fare) AS min_fare, MAX(Fare) AS max_fare 
+FROM redbusdata12
+WHERE state_name = 'YourSelectedState' AND Route_name = 'YourSelectedRoute';
+
+
+SELECT DISTINCT Price FROM redbusdata12 WHERE Price IS NOT NULL;
+
